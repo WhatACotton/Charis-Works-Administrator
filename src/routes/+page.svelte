@@ -26,9 +26,11 @@
 			console.log(error);
 		}
 	};
+	if (user === '') {
+		GetCustomer();
+	}
 </script>
 
-<button on:click={GetCustomer}>データを取得</button>
 <p>{user}</p>
 {#if user === 'Seller'}
 	<ul>
@@ -41,5 +43,9 @@
 {:else if user}
 	<ul>
 		<li>ここに来るべきではなかった。ここには何もない...</li>
+	</ul>
+{:else}
+	<ul>
+		<li>ログインしてください</li>
 	</ul>
 {/if}
