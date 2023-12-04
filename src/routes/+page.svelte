@@ -17,8 +17,10 @@
 			}
 
 			user = json.Customer.role;
+			//出品者
 			if (user === 'Seller') {
 				localStorage.setItem('role', 'Seller');
+			//管理者
 			} else if (user === 'Admin') {
 				localStorage.setItem('role', 'Admin');
 			}
