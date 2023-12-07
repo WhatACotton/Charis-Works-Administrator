@@ -1,4 +1,5 @@
 <script lang="ts">
+	
 	let user = '';
 	export const GetCustomer = async () => {
 		try {
@@ -31,8 +32,10 @@
 	if (user === '') {
 		GetCustomer();
 	}
+	import Button from "@smui/button"
+	import  Label  from "@smui/button";
 </script>
-
+<link rel="stylesheet" href="node_modules/svelte-material-ui/bare.css" />
 <p>{user}</p>
 {#if user === 'Seller'}
 	<ul>
@@ -51,3 +54,4 @@
 		<li>ログインしてください</li>
 	</ul>
 {/if}
+<Button>testButton</Button>
